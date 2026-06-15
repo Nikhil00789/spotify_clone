@@ -10,17 +10,17 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <title>Document</title>
 </head>
 <body>
     <div class="main">
+        <!-- Sidebar -->
         <div class="sidebar">
             <div class="nav">
-                <div class="nav-option" style="opacity: 1;">
+                <div class="nav-option active-nav" id="nav-home">
                     <i class="fa-solid fa-house"></i>
                     <a href="#">Home</a>
                 </div>
-                <div class="nav-option">
+                <div class="nav-option" id="nav-search">
                     <i class="fa-solid fa-magnifying-glass"></i>
                     <a href="#">Search</a>
                 </div>
@@ -32,114 +32,149 @@
                         <a href="#">Your Library</a>
                     </div>
                     <div class="icons">
-                        <i class="fa-solid fa-plus"></i>
-                        <i class="fa-solid fa-arrow-right"></i>
+                        <i class="fa-solid fa-plus" title="Create playlist"></i>
+                        <i class="fa-solid fa-arrow-right" title="Expand"></i>
                     </div>
-                </div> 
-                <div class="lib-box">
-                    <div class="box">
-                        <p class="box-p1">Create your first playlist</p>
-                        <p class="box-p2">It's easy, we'll help you</p>
-                        <button class="badge">Create playlist</button>
+                </div>
+
+                <div class="playlist-list">
+                    <div class="playlist-item" data-song="0">
+                        <img src="https://picsum.photos/seed/pl1/48/48" class="playlist-img">
+                        <div class="playlist-info">
+                            <p class="playlist-name">Chill Vibes</p>
+                            <p class="playlist-meta">Playlist • 24 songs</p>
+                        </div>
                     </div>
-                    <div class="box">
-                        <p class="box-p1">Let's find some podcast to follow</p>
-                        <p class="box-p2">We'll keep you updated on new episodes</p>
-                        <button class="badge">Browse podcast</button>
+                    <div class="playlist-item" data-song="3">
+                        <img src="https://picsum.photos/seed/pl2/48/48" class="playlist-img">
+                        <div class="playlist-info">
+                            <p class="playlist-name">Top Hits 2024</p>
+                            <p class="playlist-meta">Playlist • 18 songs</p>
+                        </div>
+                    </div>
+                    <div class="playlist-item" data-song="6">
+                        <img src="https://picsum.photos/seed/pl3/48/48" class="playlist-img">
+                        <div class="playlist-info">
+                            <p class="playlist-name">Workout Energy</p>
+                            <p class="playlist-meta">Playlist • 32 songs</p>
+                        </div>
+                    </div>
+                    <div class="playlist-item" data-song="9">
+                        <img src="https://picsum.photos/seed/pl4/48/48" class="playlist-img">
+                        <div class="playlist-info">
+                            <p class="playlist-name">Late Night Drive</p>
+                            <p class="playlist-meta">Playlist • 15 songs</p>
+                        </div>
+                    </div>
+                    <div class="playlist-item" data-song="1">
+                        <img src="https://picsum.photos/seed/pl5/48/48" class="playlist-img">
+                        <div class="playlist-info">
+                            <p class="playlist-name">Indie Favourites</p>
+                            <p class="playlist-meta">Playlist • 40 songs</p>
+                        </div>
+                    </div>
+                    <div class="playlist-item" data-song="5">
+                        <img src="https://picsum.photos/seed/pl6/48/48" class="playlist-img">
+                        <div class="playlist-info">
+                            <p class="playlist-name">Morning Boost</p>
+                            <p class="playlist-meta">Playlist • 20 songs</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
+
+        <!-- Main Content -->
         <div class="main-content">
             <div class="sticky-nav">
                 <div class="sticky-nav-icons">
-                    <img src="backward_icon.png">
-                    <img src="forward_icon.png" class="hide">
+                    <img src="backward_icon.png" id="btn-back" title="Go back">
+                    <img src="forward_icon.png" class="hide" id="btn-fwd" title="Go forward">
+                </div>
+                <div class="search-bar-wrap">
+                    <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                    <input type="text" id="search-input" placeholder="What do you want to play?" class="search-input">
                 </div>
                 <div class="sticky-nav-options">
                     <button class="badge nav-item hide">Explore Premium</button>
-                    <button class="badge nav-item dark-badge"><i class="fa-sharp fa-regular fa-circle-down" style="margin-right: 5px;"></i>Install App</button>
-                    <i class="fa-regular fa-user nav-item"></i>
-                </div>
-            </div>
-            <h2>Recently Played</h2>
-            <div class="cards-container">
-                <div class="card">
-                    <img src="card1img.jpeg" class="card-img">
-                    <p class="card-title">Top 50 - Global</p>
-                    <p class="card-info">Your daily updates of the most played...</p>
+                    <button class="badge nav-item dark-badge"><i class="fa-sharp fa-regular fa-circle-down" style="margin-right:5px"></i>Install App</button>
+                    <div class="user-avatar" title="Profile">N</div>
                 </div>
             </div>
 
-            <h2>Trending now near you</h2>
-            <div class="cards-container">
-                <div class="card">
-                    <img src="card2img.jpeg" class="card-img">
-                    <p class="card-title">Top 50 - Global</p>
-                    <p class="card-info">Your daily updates of the most played...</p>
-                </div>
-                <div class="card">
-                    <img src="card3img.jpeg" class="card-img">
-                    <p class="card-title">Top 50 - Global</p>
-                    <p class="card-info">Your daily updates of the most played...</p>
-                </div>
-                <div class="card">
-                    <img src="card4img.jpeg" class="card-img">
-                    <p class="card-title">Top 50 - Global</p>
-                    <p class="card-info">Your daily updates of the most played...</p>
-                </div>
-                <div class="card">
-                    <img src="card2img.jpeg" class="card-img">
-                    <p class="card-title">Top 50 - Global</p>
-                    <p class="card-info">Your daily updates of the most played...</p>
-                </div>
-                <div class="card">
-                    <img src="card2img.jpeg" class="card-img">
-                    <p class="card-title">Top 50 - Global</p>
-                    <p class="card-info">Your daily updates of the most played...</p>
-                </div>
-            </div>
+            <!-- Recently Played -->
+            <section>
+                <h2>Recently Played</h2>
+                <div class="cards-container" id="recently-played"></div>
+            </section>
+
+            <!-- Trending -->
+            <section>
+                <h2>Trending Now</h2>
+                <div class="cards-container" id="trending"></div>
+            </section>
+
+            <!-- Featured Charts -->
+            <section>
                 <h2>Featured Charts</h2>
-                <div class="cards-container">
-                    <div class="card">
-                        <img src="card5img.jpeg" class="card-img">
-                        <p class="card-title">Top 50 - Global</p>
-                        <p class="card-info">Your daily updates of the most played...</p>
-                    </div>
+                <div class="cards-container" id="charts"></div>
+            </section>
 
-                    <div class="card">
-                        <img src="card6img.jpeg" class="card-img">
-                        <p class="card-title">Top Songs India</p>
-                        <p class="card-info">Your daily updates of the most played...</p>
-                    </div>
-                    <div class="card">
-                        <img src="card1img.jpeg" class="card-img">
-                        <p class="card-title">Top 50 - Global</p>
-                        <p class="card-info">Your daily updates of the most played...</p>
-                    </div>
-                </div>
+            <!-- New Releases -->
+            <section>
+                <h2>New Releases</h2>
+                <div class="cards-container" id="new-releases"></div>
+            </section>
+
             <div class="footer">
                 <div class="line"></div>
-            </div>       
+            </div>
         </div>
+
+        <!-- Music Player -->
         <div class="music-player">
-            <div class="album"></div>
+            <!-- Now Playing Info -->
+            <div class="album">
+                <img id="player-art" src="https://picsum.photos/seed/default/56/56" alt="Album Art" class="player-art">
+                <div class="player-track-info">
+                    <p id="player-title" class="player-title">Select a song</p>
+                    <p id="player-artist" class="player-artist">—</p>
+                </div>
+                <button class="like-btn" id="player-like" title="Like">
+                    <i class="fa-regular fa-heart"></i>
+                </button>
+            </div>
+
+            <!-- Controls -->
             <div class="player">
                 <div class="player-controls">
-                    <img src="./player_icon1.png" class="player-control-icon">
-                    <img src="./player_icon2.png" class="player-control-icon">
-                    <img src="./player_icon3.png" class="player-control-icon" style="opacity: 1;height:2rem">
-                    <img src="./player_icon4.png" class="player-control-icon">
-                    <img src="./player_icon5.png" class="player-control-icon">
+                    <button class="ctrl-btn" id="btn-shuffle" title="Shuffle"><i class="fa-solid fa-shuffle"></i></button>
+                    <button class="ctrl-btn" id="btn-prev" title="Previous"><i class="fa-solid fa-backward-step"></i></button>
+                    <button class="ctrl-btn play-pause-btn" id="btn-play" title="Play">
+                        <i class="fa-solid fa-play"></i>
+                    </button>
+                    <button class="ctrl-btn" id="btn-next" title="Next"><i class="fa-solid fa-forward-step"></i></button>
+                    <button class="ctrl-btn" id="btn-repeat" title="Repeat"><i class="fa-solid fa-repeat"></i></button>
                 </div>
                 <div class="playback-bar">
-                    <span class="curr-time">00:00</span>
-                    <input type="range" min="0" max="100" class="progress-bar" step="1">
-                    <span class="tot-time">3:33</span>
+                    <span class="curr-time" id="curr-time">0:00</span>
+                    <input type="range" min="0" max="100" value="0" class="progress-bar" id="progress-bar" step="1">
+                    <span class="tot-time" id="tot-time">0:00</span>
                 </div>
             </div>
-            <div class="controls"></div>
+
+            <!-- Volume -->
+            <div class="controls">
+                <div class="volume-wrap">
+                    <button class="ctrl-btn vol-btn" id="btn-vol" title="Mute">
+                        <i class="fa-solid fa-volume-high"></i>
+                    </button>
+                    <input type="range" min="0" max="100" value="70" class="volume-bar" id="volume-bar">
+                </div>
+            </div>
         </div>
     </div>
+
+    <script src="app.js"></script>
 </body>
 </html>
