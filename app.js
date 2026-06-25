@@ -1,23 +1,24 @@
+// Song data — images from picsum.photos (free, no API key needed)
 const songs = [
-  { id: 0,  title: "Blinding Lights",      artist: "The Weeknd",       img: "card1img.jpeg", duration: 200, section: "recent"  },
-  { id: 1,  title: "Shape of You",          artist: "Ed Sheeran",       img: "card2img.jpeg", duration: 234, section: "recent"  },
-  { id: 2,  title: "Dance Monkey",          artist: "Tones and I",      img: "card3img.jpeg", duration: 209, section: "recent"  },
-  { id: 3,  title: "Levitating",            artist: "Dua Lipa",         img: "card4img.jpeg", duration: 203, section: "recent"  },
-  { id: 4,  title: "Stay",                  artist: "The Kid LAROI",    img: "card5img.jpeg", duration: 141, section: "recent"  },
-  { id: 5,  title: "As It Was",             artist: "Harry Styles",     img: "card6img.jpeg", duration: 167, section: "trending"},
-  { id: 6,  title: "Heat Waves",            artist: "Glass Animals",    img: "card1img.jpeg", duration: 238, section: "trending"},
-  { id: 7,  title: "Watermelon Sugar",      artist: "Harry Styles",     img: "card2img.jpeg", duration: 174, section: "trending"},
-  { id: 8,  title: "Anti-Hero",             artist: "Taylor Swift",     img: "card3img.jpeg", duration: 200, section: "trending"},
-  { id: 9,  title: "Flowers",               artist: "Miley Cyrus",      img: "card4img.jpeg", duration: 200, section: "trending"},
-  { id: 10, title: "Top 50 — Global",       artist: "Various Artists",  img: "card1img.jpeg", duration: 195, section: "charts"  },
-  { id: 11, title: "Top Songs India",       artist: "Various Artists",  img: "card5img.jpeg", duration: 210, section: "charts"  },
-  { id: 12, title: "Viral Hits",            artist: "Various Artists",  img: "card6img.jpeg", duration: 185, section: "charts"  },
-  { id: 13, title: "Midnight Rain",         artist: "Taylor Swift",     img: "card5img.jpeg", duration: 174, section: "charts"  },
-  { id: 14, title: "Escapism.",             artist: "RAYE",             img: "card2img.jpeg", duration: 218, section: "new"     },
-  { id: 15, title: "Calm Down",             artist: "Rema",             img: "card3img.jpeg", duration: 238, section: "new"     },
-  { id: 16, title: "Unholy",               artist: "Sam Smith",        img: "card4img.jpeg", duration: 157, section: "new"     },
-  { id: 17, title: "Cruel Summer",          artist: "Taylor Swift",     img: "card6img.jpeg", duration: 178, section: "new"     },
-  { id: 18, title: "Golden Hour",           artist: "JVKE",             img: "card5img.jpeg", duration: 209, section: "new"     },
+  { id: 0,  title: "Blinding Lights",      artist: "The Weeknd",       img: "https://picsum.photos/seed/blindinglights/300/300",   duration: 200, section: "recent"  },
+  { id: 1,  title: "Shape of You",          artist: "Ed Sheeran",       img: "https://picsum.photos/seed/shapeofyou/300/300",       duration: 234, section: "recent"  },
+  { id: 2,  title: "Dance Monkey",          artist: "Tones and I",      img: "https://picsum.photos/seed/dancemonkey/300/300",      duration: 209, section: "recent"  },
+  { id: 3,  title: "Levitating",            artist: "Dua Lipa",         img: "https://picsum.photos/seed/levitating/300/300",       duration: 203, section: "recent"  },
+  { id: 4,  title: "Stay",                  artist: "The Kid LAROI",    img: "https://picsum.photos/seed/staylaroi/300/300",        duration: 141, section: "recent"  },
+  { id: 5,  title: "As It Was",             artist: "Harry Styles",     img: "https://picsum.photos/seed/asitwas/300/300",          duration: 167, section: "trending"},
+  { id: 6,  title: "Heat Waves",            artist: "Glass Animals",    img: "https://picsum.photos/seed/heatwaves/300/300",        duration: 238, section: "trending"},
+  { id: 7,  title: "Watermelon Sugar",      artist: "Harry Styles",     img: "https://picsum.photos/seed/watermelon/300/300",       duration: 174, section: "trending"},
+  { id: 8,  title: "Anti-Hero",             artist: "Taylor Swift",     img: "https://picsum.photos/seed/antihero/300/300",         duration: 200, section: "trending"},
+  { id: 9,  title: "Flowers",               artist: "Miley Cyrus",      img: "https://picsum.photos/seed/flowers2024/300/300",      duration: 200, section: "trending"},
+  { id: 10, title: "Top 50 — Global",       artist: "Various Artists",  img: "https://picsum.photos/seed/top50global/300/300",      duration: 195, section: "charts"  },
+  { id: 11, title: "Top Songs India",       artist: "Various Artists",  img: "https://picsum.photos/seed/topsongindia/300/300",     duration: 210, section: "charts"  },
+  { id: 12, title: "Viral Hits",            artist: "Various Artists",  img: "https://picsum.photos/seed/viralhits/300/300",        duration: 185, section: "charts"  },
+  { id: 13, title: "Midnight Rain",         artist: "Taylor Swift",     img: "https://picsum.photos/seed/midnightrain/300/300",     duration: 174, section: "charts"  },
+  { id: 14, title: "Escapism.",             artist: "RAYE",             img: "https://picsum.photos/seed/escapism/300/300",         duration: 218, section: "new"     },
+  { id: 15, title: "Calm Down",             artist: "Rema",             img: "https://picsum.photos/seed/calmdown/300/300",         duration: 238, section: "new"     },
+  { id: 16, title: "Unholy",               artist: "Sam Smith",        img: "https://picsum.photos/seed/unholy2023/300/300",       duration: 157, section: "new"     },
+  { id: 17, title: "Cruel Summer",          artist: "Taylor Swift",     img: "https://picsum.photos/seed/cruelsummer/300/300",      duration: 178, section: "new"     },
+  { id: 18, title: "Golden Hour",           artist: "JVKE",             img: "https://picsum.photos/seed/goldenhour/300/300",       duration: 209, section: "new"     },
 ];
 
 const sectionMap = {
@@ -66,7 +67,7 @@ function buildCard(song) {
     </button>
     <div class="card-img-wrap">
       <img src="${song.img}" class="card-img" alt="${song.title}" loading="lazy"
-           onerror="this.src='card1img.jpeg'">
+           onerror="this.src='https://picsum.photos/seed/fallback${song.id}/300/300'">
       <button class="card-play-btn" data-id="${song.id}" title="Play ${song.title}">
         <i class="fa-solid fa-play"></i>
       </button>
